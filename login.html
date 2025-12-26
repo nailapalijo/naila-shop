@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Naila Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 flex min-h-screen">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center p-12 md:p-24 bg-white">
+        <div class="max-w-md w-full mx-auto">
+            <h1 class="text-4xl font-bold text-slate-900 mb-2 tracking-tight">Elite Access</h1>
+            <p class="text-slate-500 mb-10">Manage your orders and premium subscriptions.</p>
+
+            <form class="space-y-6">
+                <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                <input type="password" placeholder="Password" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                <button class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-blue-600 transition shadow-xl">Sign In</button>
+            </form>
+            <p class="mt-8 text-center text-slate-500 text-sm">New to Naila Shop? <a href="#" class="text-blue-600 font-bold underline">Apply for Access</a></p>
+        </div>
+    </div>
+    <div class="hidden lg:block lg:w-1/2 bg-slate-900 relative">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 flex items-center justify-center p-20">
+            <div class="backdrop-blur-xl bg-white/10 p-12 rounded-[3rem] border border-white/20 text-white max-w-sm">
+                <p class="text-2xl font-bold italic mb-4">"Best tech platform of 2025."</p>
+                <p class="opacity-70">— TechCrunch Global</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

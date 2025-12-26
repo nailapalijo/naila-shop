@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Naila Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 min-h-screen">
+    <header class="bg-white border-b border-slate-200 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">NAILA<span class="text-slate-900">.SHOP</span></a>
+            <a href="shop.html" class="text-slate-600 hover:text-blue-600 font-medium">← Back to Shop</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-2/3">
+            <h1 class="text-3xl font-bold mb-8">Shopping Cart</h1>
+            <div id="cart-items-container" class="space-y-4">
+            </div>
+        </div>
+        <div class="lg:w-1/3">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm sticky top-24">
+                <h2 class="text-xl font-bold mb-6">Order Summary</h2>
+                <div class="flex justify-between mb-4">
+                    <span class="text-slate-500">Subtotal</span>
+                    <span id="total-price" class="font-bold text-slate-900">$0</span>
+                </div>
+                <div class="flex justify-between mb-8 pb-4 border-b">
+                    <span class="text-slate-500">Shipping</span>
+                    <span class="text-green-600 font-bold uppercase text-xs pt-1">Free</span>
+                </div>
+                <button onclick="checkout()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
