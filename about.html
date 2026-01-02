@@ -3,38 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Naila Shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s all ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body class="bg-white">
-    <section class="py-32 bg-slate-900 text-white relative overflow-hidden">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-6xl md:text-8xl font-bold mb-8 italic tracking-tighter">Beyond Innovation.</h1>
-            <p class="text-slate-400 text-xl max-w-2xl mx-auto">Naila Shop is not just an e-commerce platform; it's a movement towards aesthetic and functional technology.</p>
+    <section class="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden">
+        <div class="text-center z-10 max-w-4xl">
+            <h1 class="text-7xl md:text-9xl font-bold tracking-tighter mb-8 italic">Innovation.</h1>
+            <p class="text-xl md:text-2xl text-slate-400 leading-relaxed">Naila Shop is the intersection of premium aesthetics and high-performance engineering. We source the globe for products that define the next decade.</p>
         </div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-20"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200')] bg-cover opacity-20"></div>
     </section>
 
-    <section class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <section class="py-32 container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center reveal">
         <div>
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" class="rounded-[4rem] shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800" class="rounded-[4rem] shadow-2xl">
         </div>
         <div>
-            <h2 class="text-4xl font-bold text-slate-900 mb-6">Our DNA</h2>
-            <p class="text-slate-500 text-lg leading-relaxed mb-8">We believe that every pixel matters. Our products are sourced from the most reliable tech manufacturers globally, ensuring that every purchase you make is an investment in quality.</p>
+            <h2 class="text-5xl font-bold text-slate-900 mb-8">Our Heritage</h2>
+            <p class="text-slate-500 text-lg leading-relaxed mb-10">Starting as a small digital boutique, we've grown into a global leader in professional tech supplies. Every item in our catalog undergoes a rigorous 50-point quality check.</p>
             <div class="grid grid-cols-2 gap-8">
-                <div>
-                    <p class="text-4xl font-bold text-blue-600">20k+</p>
-                    <p class="text-slate-400 text-sm uppercase">Global Orders</p>
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <p class="text-4xl font-bold">50k+</p>
+                    <p class="text-slate-400 uppercase text-xs font-bold tracking-widest mt-1">Customers</p>
                 </div>
-                <div>
-                    <p class="text-4xl font-bold text-blue-600">99%</p>
-                    <p class="text-slate-400 text-sm uppercase">Positive Feedback</p>
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <p class="text-4xl font-bold">120+</p>
+                    <p class="text-slate-400 uppercase text-xs font-bold tracking-widest mt-1">Countries</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 150) el.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
