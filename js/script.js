@@ -16,6 +16,7 @@ function addToCart(name, price) {
     msg.innerHTML = `✅ ${name} Added!`;
     document.body.appendChild(msg);
     setTimeout(() => msg.remove(), 2000);
+
 }
 
 document.addEventListener('DOMContentLoaded', updateCartUI);
